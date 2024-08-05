@@ -18,8 +18,7 @@
 
 1. **创建 Telegram Bot**
     - 在 Telegram 中找到 `@BotFather`，创建一个新 Bot，并获取 API Token。
-    - 获取到你的 Chat ID 方法一，@KinhRoBot `ID`就是Chat ID
-    - 获取到你的 Chat ID 方法二，可以通过向 Bot 发送一条消息，然后访问 `https://api.telegram.org/bot<your_bot_token>/getUpdates` 找到 Chat ID。
+    - 获取到你的 Chat ID 方法一，`@KinhRoBot` 发送/id 其中的 `ID`就是Chat ID
 
 2. **配置 GitHub Secrets**
     - 转到你 fork 的仓库页面。
@@ -50,27 +49,6 @@
 2. **运行工作流**
     - GitHub Actions 将会根据你设置的定时任务（例如每三天一次）自动运行脚本。
     - 如果需要手动触发，可以在 Actions 页面手动运行工作流。
-
-#### 示例 Secrets 和获取方法总结
-
-- **TELEGRAM_BOT_TOKEN**
-    - 示例值: `1234567890:ABCDEFghijklmnopQRSTuvwxyZ`
-    - 获取方法: 在 Telegram 中使用 `@BotFather` 创建 Bot 并获取 API Token。
-
-- **TELEGRAM_CHAT_ID**
-    - 示例值: `1234567890`
-    - 获取方法: 发送一条消息给你的 Bot，然后访问 `https://api.telegram.org/bot<your_bot_token>/getUpdates` 获取 Chat ID。
-
-- **ACCOUNTS_JSON**
-    - 示例值:
-      ```json
-      [
-            {"username": "账号1", "password": "密码", "panel": "panel6.serv00.com"},
-            {"username": "账号2", "password": "密码", "panel": "panel.ct8.pl"},
-            {"username": "账号3", "password": "密码", "panel": "panel6.serv00.com"}
-          ]
-      ```
-    - 获取方法: 创建一个包含serv00账号信息的 JSON 文件，并将其内容添加到 GitHub 仓库的 Secrets 中。
 
 ### 注意事项
 
